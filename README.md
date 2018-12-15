@@ -15,6 +15,14 @@ Nginx должен быть установлен, если получать се
 * **REGISTRY_PASS** - пароль для авторизации (```docker login registry.example.com```) 
 
 ## получение сертификата через certbot
+Установка cerbot
+```
+apt-get install software-properties-common python-software-properties
+add-apt-repository ppa:certbot/certbot
+apt-get update
+apt-get install python-certbot-nginx
+```
+
 Если копировать конфиг из этого репозитория то удалить из него все что свзянно с ssl
 ```
 certbot --authenticator webroot --installer nginx
